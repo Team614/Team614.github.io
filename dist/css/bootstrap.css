@@ -1183,8 +1183,7 @@ a.text-danger:hover {
   color: #843534;
 }
 .bg-primary {
-  color: #fff;
-  background-color: #337ab7;
+  background-image: url("http://cdn01.wallconvert.com/_media/wallpapers_1920x1200/1/2/gradient-13589.jpg");
 }
 a.bg-primary:hover {
   background-color: #286090;
