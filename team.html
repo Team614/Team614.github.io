@@ -23,55 +23,8 @@
    </head>
    <body>
    <div class="container">
-  
-  </div>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-default" role="navigation">
-         <div class="container">
-            <div class="navbar-header">
-               <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-toggle="collapse" data-target="#navbar">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="#">Team 614 Robotics</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-               <ul class="nav navbar-nav">
-                  <li><a href="index.html">Home</a></li>
-                  <li class="dropdown active">
-                     <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">About <span class="caret"></span></a>
-                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="team.html">The Team</a></li>
-                        <li><a href="website.html">Website</a></li>
-                        <li><a href="mentors.html">Mentors</a></li>
-                     </ul>
-                  </li>
-                  <li><a href="http://www.usfirst.org/">US FIRST</a></li>
-                  <li><a href="sponsors.html">Sponsors</a></li>
-                  <li><a href="https://my.usfirst.org/stims/">Student Registration</a></li>
-                  <li><a href="http://www.usfirst.org/roboticsprograms/frc">Contact Us</a></li>
-                  <li class="dropdown">
-                     <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                     </ul>
-                  </li>
-               </ul>
-            </div>
-            <!--/.nav-collapse -->
-         </div>
-      </nav>
-      <!-- Begin page content -->
-      <div class="container">
-      <div class="row">
+  <div class="row">
+    <h1>Bootstrap 3 Lightbox using Modal</h1>
     <div class="row">
       <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 1" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350"></a></div>
       <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 2" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/2255EE"></a></div>
@@ -86,21 +39,35 @@
       <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 12" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/DDD"></a></div>
       <div class="col-lg-3 col-sm-4 col-xs-6"><a title="Image 13" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/992233"></a></div>
     </div>
+    <hr>
+    <a href="http://bootply.com/71401">Edit on Bootply</a>
+    <hr>
   </div>
-      <div class="page-header">
-         <h1>The Team</h1>
-      </div>
-      <footer class="footer">
-         <div class="container">
-            <p class="text-muted">&copy; 2014 Team 614 Robotics</p>
-         </div>
-      </footer>
-      <!-- Bootstrap core JavaScript
-         ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-      <script src="dist/js/bootstrap.min.js"></script>
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</div>
+<div class="modal" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+	<div class="modal-header">
+		<button class="close" type="button" data-dismiss="modal">×</button>
+		<h3 class="modal-title"></h3>
+	</div>
+	<div class="modal-body">
+		<div id="modalCarousel" class="carousel">
+ 
+          <div class="carousel-inner">
+           
+          </div>
+          
+          <a class="carousel-control left" href="#modaCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="carousel-control right" href="#modalCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+          
+        </div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-default" data-dismiss="modal">Close</button>
+	</div>
+   </div>
+  </div>
+</div>
    </body>
 </html>
