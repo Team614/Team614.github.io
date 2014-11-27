@@ -114,12 +114,13 @@
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script>
-         $('.thumbnail').click(function(){
+         $('.thumbnail').click(function(e){
                $('.modal-body').empty();
                var title = $(this).parent('a').attr("title");
                $('.modal-title').html(title);
                $($(this).parents('div').html()).appendTo('.modal-body');
                $('#myModal').modal({show:true});
+			   e.preventDefault();
                });
       </script>
       <script src="dist/js/bootstrap.min.js"></script>
