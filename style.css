@@ -11,3 +11,7 @@ body {
 .clear-background {
 	background: #fff;
 }
+.footer-color {
+	background: #222222;
+	border-color: #101010;
+}
