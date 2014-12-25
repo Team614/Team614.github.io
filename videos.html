@@ -38,20 +38,20 @@
             <div class="collapse navbar-collapse" id="navbar">
                <ul class="nav navbar-nav">
                   <li><a href="index.html">Home</a></li>
-                  <li class="dropdown active">
+                  <li class="dropdown">
                      <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">About <span class="caret"></span></a>
                      <ul class="dropdown-menu" role="menu">
                         <li><a href="team.html">The Team</a></li>
-                        <li class="active"><a href="website.html">Website</a></li>
+                        <li><a href="website.html">Website</a></li>
                         <li><a href="mentors.html">Mentors</a></li>
                      </ul>
                   </li>
                   <li><a href="http://www.usfirst.org/">US FIRST</a></li>
-				  <li class="dropdown">
+				  <li class="dropdown active">
                      <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Media <span class="caret"></span></a>
                      <ul class="dropdown-menu" role="menu">
                         <li><a href="photos.html">Photos</a></li>
-                        <li><a href="videos.html">Videos</a></li>
+                        <li class="active"><a href="videos.html">Videos</a></li>
                      </ul>
                   </li>
                   <li><a href="sponsors.html">Sponsors</a></li>
@@ -73,9 +73,41 @@
       <!-- Begin page content -->
       <div class="container clear-background">
          <div class="page-header">
-            <h1>Website</h1>
+            <h1>Videos</h1>
          </div>
-         <p class="lead">Team 614's website utilizes the most cutting edge tools in modern website development. It uses Twitter Bootstrap for a consistent website experience across different devices.</p>
+		 <div class="row">
+			<div class="col-md-12"><h2>2013 Season</h2></div>
+			<div class="col-lg-3 col-sm-4 col-xs-6">
+				<a class="youtube-modal thumbnail" title="FRC Team 614 DC Regional 2013 Competition Round 66" href="https://www.youtube.com/watch?v=wPcNg0GY0MA">
+				    <img class="img-responsive" src="">
+					<h5 class="text-center">FRC Team 614 DC Regional 2013 Competition Round 66</h5>
+				</a>
+			</div>
+			<div class="col-lg-3 col-sm-4 col-xs-6">
+				<a class="youtube-modal thumbnail" title="FRC Team 614 DC Regional 2013 Competition Round 76" href="https://www.youtube.com/watch?v=0TOXU7f4ZU8">
+				    <img class="img-responsive" src="">
+					<h5 class="text-center">FRC Team 614 DC Regional 2013 Competition Round 76</h5>
+				</a>
+			</div>
+		 </div>
+      </div>
+	  <div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button class="close" type="button" data-dismiss="modal">×</button>
+                     <h4 class="modal-title">Heading</h4>
+                  </div>
+                  <div class="modal-body">
+					 <div class="embed-responsive embed-responsive-16by9">
+						<iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+					 </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
       </div>
       <footer class="footer">
          <div class="container footer-color">
@@ -86,6 +118,32 @@
          ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	  <script>
+         $('.img-responsive').click(function(e){
+            var title = $(this).parent('a').attr("title");
+			var url = $(this).parent('a').attr("href");
+            $('.modal-title').html(title);
+			$('.modal-body iframe').attr("src", "http://www.youtube.com/embed/" + getYoutubeId(url));
+            $('#myModal').modal({show:true});
+			e.preventDefault();
+        });
+		$('#myModal').on('hidden.bs.modal',function (){
+			$('.modal-body iframe').attr("src", "");
+		});
+	    $(".youtube-modal").each(function(){
+			var url = $(this).attr('href');
+			$(this).children().attr('src', 'http://img.youtube.com/vi/' + getYoutubeId(url) + '/0.jpg');
+		});
+		function getYoutubeId(url) {
+			var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+			var match = url.match(regExp);
+			if (match && match[2].length == 11) {
+				return match[2];
+			} else {
+				return null;
+			}
+		 }
+      </script>
       <script src="dist/js/bootstrap.min.js"></script>
       <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
       <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
