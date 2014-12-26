@@ -119,15 +119,15 @@
 	  <!-- Placed at the end of the document so the pages load faster -->
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	  <script>
-		 $('.img-responsive').click(function(e){
-			var title = $(this).parent('a').attr("title");
-			var url = $(this).parent('a').attr("href");
+		 $('.thumbnail').click(function(e){
+			var title = $(this).attr("title");
+			var url = $(this).attr("href");
 			$('.modal-title').html(title);
 			$('.modal-body iframe').attr("src", "http://www.youtube.com/embed/" + getYoutubeId(url));
 			$('#myModal').modal({show:true});
 			e.preventDefault();
 		});
-		$('#myModal').on('hidden.bs.modal',function (){
+		$('#myModal').on('hidden.bs.modal',function(){
 			$('.modal-body iframe').attr("src", "");
 		});
 		$(".youtube-modal").each(function(){
