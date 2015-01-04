@@ -12,6 +12,13 @@ body {
     background: #fff;
 }
 .footer-color {
-    background: #222222;
+    background: #222;
+	height: 54px;
     border-color: #101010;
+}
+.navbar {
+    margin-bottom: 0px;
+}
+.footer-text {
+	padding-top: 16px;
 }
