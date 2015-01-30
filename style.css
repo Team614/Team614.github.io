@@ -2,10 +2,10 @@ body {
     background-image: url("media/background.jpg");
 }
 .clear-background {
-    background: #fff;
+    background: white;
 }
 .footer-color {
-    background: #222;
+    background: #fff;
     height: 54px;
     border-color: #101010;
 }
@@ -20,4 +20,8 @@ body {
 }
 .contact-item-img {
 	max-height: 150px;
+}
+.no-border{
+	padding: 4px !important;
+	border-top: 0px !important;
 }
