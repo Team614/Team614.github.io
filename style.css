@@ -21,7 +21,7 @@ body {
 .contact-item-img {
 	max-height: 150px;
 }
-.no-border{
-	padding: 4px !important;
-	border-top: 0px !important;
+.logo {
+    padding-top: 20px;
+	padding-bottom: 20px;
 }
