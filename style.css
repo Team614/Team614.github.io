@@ -5,12 +5,13 @@ body {
     background: white;
 }
 .footer-color {
-    background: #fff;
+    background: #222;
     height: 54px;
     border-color: #101010;
 }
 .navbar {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+	margin-top: 20px;
 }
 .footer-text {
     padding-top: 16px;
@@ -23,5 +24,11 @@ body {
 }
 .logo {
     padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
+}
+.rounded-top {
+    margin-top: -2px;
+	margin-bottom: -1px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
 }
